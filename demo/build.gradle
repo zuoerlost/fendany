@@ -1,0 +1,83 @@
+apply from: 'libraries.gradle'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'jetty'
+
+group 'fendany'
+version '1.0-SNAPSHOT'
+
+war {
+    baseName = 'fendany'
+    archiveName = 'fendany.war'
+    version = '1.0.0'
+}
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+}
+
+dependencies {
+
+    compile(libraries.aopalliance)
+    compile(libraries.spring_core)
+    compile(libraries.spring_aop)
+    compile(libraries.spring_context)
+    compile(libraries.spring_context_support)
+    compile(libraries.spring_expression)
+    compile(libraries.spring_jdbc)
+    compile(libraries.spring_tx)
+    compile(libraries.spring_web)
+    compile(libraries.spring_webmvc)
+    compile(libraries.spring_jms)
+    compile("org.springframework:spring-beans:${versions.spring}")
+
+    compile(libraries.log4j)
+    compile(libraries.slf4j_api)
+    compile("org.slf4j:slf4j-log4j12:1.7.6")
+
+    compile(libraries.commons_lang3)
+    compile(libraries.commons_logging)
+    compile(libraries.commons_io)
+
+    compile("org.apache.httpcomponents:httpcore:4.4.1")
+    compile("org.apache.httpcomponents:httpclient:4.4.1")
+    compile("org.apache.httpcomponents:httpmime:4.3.1")
+
+    compile("com.github.jnr:jnr-ffi:2.0.9")
+    compile("com.github.jnr:jnr-constants:0.9.1")
+    compile("com.github.jnr:jnr-enxio:0.12")
+    compile("com.github.jnr:jnr-posix:3.0.29")
+
+    compile(libraries.commons_pool)
+    compile(libraries.commons_codec)
+
+    compile("javax.websocket:javax.websocket-api:1.1")
+
+    compile fileTree(dir: new File(rootProject.rootDir, 'libs').getAbsolutePath(),
+            includes: [
+                    "**/*.jar"
+            ])
+
+    compile("junit:junit:4.8.2")
+
+    compile("com.jcraft:jsch:0.1.54")
+    compile("com.alibaba:fastjson:1.2.17")
+
+    // jna
+    compile("net.java.dev.jna:jna:3.5.1")
+    compile("net.java.dev.jna:platform:3.5.1")
+
+
+}
+
+jettyRun {
+    httpPort 8888
+    contextPath "fendany"
+    scanIntervalSeconds 0
+    reload "automatic"
+}

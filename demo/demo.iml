@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output/>
+    <orderEntry type="inheritedJdk"/>
+    <content url="file://$MODULE_DIR$/">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true"/>
+      <excludeFolder url="file://$MODULE_DIR$/build"/>
+      <excludeFolder url="file://$MODULE_DIR$/.gradle"/>
+    </content>
+    <orderEntry type="sourceFolder" forTests="false"/>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.2.4.RELEASE/160ccd89230753d4f49477a967f5876b034d9745/spring-core-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.2.4.RELEASE/ac0a24fb3bced1f9c3274793525a74bd8e09e56b/spring-core-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.2.4.RELEASE/3329cf71b4bc49c9767ca4f0704ed7b773f29fba/spring-aop-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.2.4.RELEASE/624e142c456bd8622e27e959dc3e1b192524ba84/spring-aop-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.2.4.RELEASE/23cd0109e4eafc5629547e3680b0c4031e82efdd/spring-context-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.2.4.RELEASE/6bb77fb5a402a814329db35e9678803d14ebf1bd/spring-context-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/4.2.2.RELEASE/cfa157cb014248ebeaab19757605f2fc6267d2bd/spring-context-support-4.2.2.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/4.2.2.RELEASE/d9e4db2aed1f29ded5d9f7d124d88eec40a7186f/spring-context-support-4.2.2.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.2.4.RELEASE/15b6f6d61bc68fe2cc6cbd63e2329601afb8b39/spring-expression-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.2.4.RELEASE/4331326a05efe7890fa82ac3cdde6d396f025752/spring-expression-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.2.4.RELEASE/7aa1c3c817b0a04796e6570a2c07ac23248c1ee0/spring-jdbc-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.2.4.RELEASE/688f6c57b8edfda66b2e463d7e4030adaabc4703/spring-jdbc-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.2.4.RELEASE/66e1a131263f5f9ba95943061b22ff2666930ca6/spring-tx-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.2.4.RELEASE/52ccbd22e04e295d1642c46abdae5a9657d16de3/spring-tx-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.4.RELEASE/d4bcc6f4d8b64d7af9b67bc17f0d5106dce97926/spring-web-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.2.4.RELEASE/bcc167b48ae8c9478eb4a8f0e99d095dbf38013f/spring-web-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.2.4.RELEASE/cf4317be9c83b4c1c65ce2d3bb96673ac546030a/spring-webmvc-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.2.4.RELEASE/77456f960e9d68ee33956955fb3a9af05b930602/spring-webmvc-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jms/4.2.2.RELEASE/43df0cfc0b87162bc1055c3e1922966558cbbb5a/spring-jms-4.2.2.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jms/4.2.2.RELEASE/4abcdabd73a98b6bf29dedd4729fb6fceb5701a5/spring-jms-4.2.2.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.2.4.RELEASE/dc8e0874b53435f3e277d9da5aebd8b93cc7cf64/spring-beans-4.2.4.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.2.4.RELEASE/9e3b3823c8fd75c4c57afe9bb7c9d4f26c6d97e/spring-beans-4.2.4.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/677abe279b68c5e7490d6d50c6951376238d7d3e/log4j-1.2.17-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.6/6953717b9850aeb26d1b8375ca07dbd9c50eca4e/slf4j-log4j12-1.7.6.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.6/4197262dfb954ef804ddde1eb522f640c617741d/slf4j-log4j12-1.7.6-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/d2a489573c0ed2c4942b3660decad5d65087b406/commons-lang3-3.3.2-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/f2d8698c46d1167ff24b06a840a87d91a02db891/commons-io-2.4-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.1/f5aa318bda4c6c8d688c9d00b90681dcd82ce636/httpcore-4.4.1.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.1/9700be0d0a331691654a8e901943c9a74e33c5fc/httpcore-4.4.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.4.1/16d0bc512222f1253ee6b64d389c84e22f697f0/httpclient-4.4.1.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.4.1/30cb4791019c7280227e027b01814f4964a02482/httpclient-4.4.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.3.1/f7899276dddd01d8a42ecfe27e7031fcf9824422/httpmime-4.3.1.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.3.1/6dccd53d31a0112f029e3c328090b317178da405/httpmime-4.3.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-ffi/2.0.9/f1306974f7a56de98fb816f30d40fdc199590b63/jnr-ffi-2.0.9.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-ffi/2.0.9/20340d143111a1a820fcde1830f2d2e1efb1a3bc/jnr-ffi-2.0.9-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-constants/0.9.1/97c07385c422974638c5cc00bfae849f276c753/jnr-constants-0.9.1.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-constants/0.9.1/c7ebbb612154506e7b4ec1b4710d8ea5d9a36343/jnr-constants-0.9.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-enxio/0.12/f388b6eabf6597c1c2844452ae9d608ef01651ae/jnr-enxio-0.12.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-enxio/0.12/f1246132866733c16c83eafa50de02b6c327c6fe/jnr-enxio-0.12-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-posix/3.0.29/bc3d222cb0eae5bc59f733ee8ca9d005e3d2666f/jnr-posix-3.0.29.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-posix/3.0.29/66a63c5da04da582d3088775c455628b38b1967a/jnr-posix-3.0.29-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-pool/commons-pool/1.5.6/16390e2d74df4ab08c06a85d42a74a951dc93ad7/commons-pool-1.5.6.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-pool/commons-pool/1.5.6/bbfb73ed3c341d9738c64da8157910b967f878d6/commons-pool-1.5.6-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/9ce04e34240f674bc72680f8b843b1457383161a/commons-codec-1.9.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/3f15fff45d57656685abfee9e8302bf14580044c/commons-codec-1.9-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/javax.websocket/javax.websocket-api/1.1/eeeb68631711256418dfbb47b11c731b6c8f6235/javax.websocket-api-1.1.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/javax.websocket/javax.websocket-api/1.1/c2c8923b5cc02e5ff9eb100fc718b582efb164e2/javax.websocket-api-1.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/c94f54227b08100974c36170dcb53329435fe5ad/junit-4.8.2.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/cccca612a66b8387c399be31d69daf000de2ac9e/junit-4.8.2-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/da3584329a263616e277e15462b387addd1b208d/jsch-0.1.54.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.54/91d6069df9be9e076bdb124e82fc2a9af9547616/jsch-0.1.54-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.alibaba/fastjson/1.2.17/be249d63279f79d827a6bb0328b7d7938730c694/fastjson-1.2.17.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.alibaba/fastjson/1.2.17/30057b287e90a65e717ea6d1ea6b9fe7feaaa6b4/fastjson-1.2.17-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/3.5.1/8e20e3b9b687c5abbfbf684b2dbf9d8fb8c9691e/jna-3.5.1.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/3.5.1/8aad0aae49d0555e24ebf00321956bf0c03b0173/jna-3.5.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.5.1/1f171f6ba3065d320488d3a6672852a7e04035a3/platform-3.5.1.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.5.1/184c0377a38b295e0738fff7ea23370e7b3a5434/platform-3.5.1-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.2.2.RELEASE/7f7d71605755ccf9002bc620c8d9066fda0a2770/spring-messaging-4.2.2.RELEASE.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.springframework/spring-messaging/4.2.2.RELEASE/8a02fbc4280a4404234847e08e6f283579b23608/spring-messaging-4.2.2.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jffi/1.2.11/a16bcbd28dac61941abebb02ef8358f5fa983893/jffi-1.2.11.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jffi/1.2.11/1a9d0383f53140597110c67c6c7cdee615ec5800/jffi-1.2.11-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jffi/1.2.11/148a58808b1470149dc8d2f21da1f9f0fff5b5cb/jffi-1.2.11-native.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jffi/1.2.11/1a9d0383f53140597110c67c6c7cdee615ec5800/jffi-1.2.11-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/f0f24f6666c1a15c7e202e91610476bd4ce59368/asm-5.0.3-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/5.0.3/a7111830132c7f87d08fe48cb0ca07630f8cb91c/asm-commons-5.0.3.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/5.0.3/f0f24f6666c1a15c7e202e91610476bd4ce59368/asm-commons-5.0.3-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/5.0.3/c7126aded0e8e13fed5f913559a0dd7b770a10f3/asm-analysis-5.0.3.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/5.0.3/f0f24f6666c1a15c7e202e91610476bd4ce59368/asm-analysis-5.0.3-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/5.0.3/287749b48ba7162fb67c93a026d690b29f410bed/asm-tree-5.0.3.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/5.0.3/f0f24f6666c1a15c7e202e91610476bd4ce59368/asm-tree-5.0.3-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/5.0.3/1512e5571325854b05fb1efce1db75fcced54389/asm-util-5.0.3.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/5.0.3/f0f24f6666c1a15c7e202e91610476bd4ce59368/asm-util-5.0.3-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-x86asm/1.0.2/6936bbd6c5b235665d87bd450f5e13b52d4b48/jnr-x86asm-1.0.2.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-x86asm/1.0.2/6bb6efcd010567ad80c8bb2bdd5065b30f0f1468/jnr-x86asm-1.0.2-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.6/562424e36df3d2327e8e9301a76027fca17d54ea/slf4j-api-1.7.6.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///home/zuoer/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.6/97bb93c1badeae97a3d37e3c902df2985ee3de34/slf4j-api-1.7.6-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/fastjson-1.2.12.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES/>
+      </library>
+    </orderEntry>
+  </component>
+  <component name="ModuleRootManager"/>
+</module>

@@ -1,0 +1,251 @@
+ext {
+    versions = [
+
+            axon                  : '2.3',
+            aspectj               : '1.8.1',
+            cucumber              : '1.2.2',
+            c3p0                  : '0.9.1.2',
+            dbunit                : '2.4.9',
+            ehcache               : '2.8.3',
+            ehcache_jcache        : '1.5.0-0.5',
+            freemarker            : '2.3.21',
+            grizzly               : '2.1.2',
+            hamcrest              : '1.3',
+            hbase                 : '0.98.13-hadoop2',
+            hibernate_em          : '4.3.6.Final',
+            hibernate_javax       : '1.0.0.Final',
+            hsqldb                : '2.3.2',
+            httpclient            : '4.1.3',
+            kafka                 : '0.8.2.1',
+            javax_validation      : '1.0.0.GA',
+            javax_servlet_api     : '3.0',
+            jackson               : '2.5.3',
+            junit                 : '4.11',
+            joda_time             : '2.7',
+            log4j                 : '1.2.17',
+            logback               : '1.1.2',
+            mongodb_java          : '2.11.3',
+            mybatis_version       : '3.3.0',
+            mybatis_spring_version: '1.2.3',
+            mongodb_version       : '2.13.1',
+            morphia_version       : '1.2.3',
+            mysqldb               : '5.1.31',
+            mockito               : '1.9.5',
+            postgresql_version    : '9.4-1201-jdbc4',
+            // spring
+            spring                : '4.2.4.RELEASE',
+            spring_jms            : '4.2.2.RELEASE',
+            spring_security       : '3.2.5.RELEASE',
+            spring_session        : '1.0.1.RELEASE',
+            springdata_mongodb    : '1.5.2.RELEASE',
+            springdata_jpa        : '1.6.2.RELEASE',
+            slf4j                 : '1.7.5',
+            activemq              : '5.9.0'
+    ]
+
+    libraries = [
+
+            /** A **/
+            amqp_client                 : "com.rabbitmq:amqp-client:3.5.1",
+            avro                        : "org.apache.avro:avro:1.7.4",
+            aopalliance                 : "aopalliance:aopalliance:1.0",
+
+            /** C **/
+            cache_api                   : "javax.cache:cache-api:1.0.0",
+
+            // apache commons
+            commons_fileupload          : "commons-fileupload:commons-fileupload:1.3.1",
+            commons_beanutils           : "org.apache.commons:commons-beanutils:1.7.0",
+            commons_beanutils_core      : "org.apache.commons:commons-beanutils-core:1.8.0",
+            commons_cli                 : "org.apache.commons:commons-cli:1.2",
+            commons_codec               : "commons-codec:commons-codec:1.9",
+            commons_collections         : "org.apache.commons:commons-collections:3.2.1",
+            commons_compress            : "org.apache.commons:commons-compress:1.4.1",
+            commons_configuration       : "org.apache.commons:commons-configuration:1.6",
+            commons_daemon              : "org.apache.commons:commons-daemon:1.0.13",
+            commons_digester            : "org.apache.commons:commons-digester:1.8",
+            commons_el                  : "org.apache.commons:commons-el:1.0",
+            //commons_httpclient:					"org.apache.commons:commons-httpclient:3.1",
+            commons_io                  : "commons-io:commons-io:2.4",
+            commons_lang                : "commons-lang:commons-lang:2.6",
+            commons_lang3               : "org.apache.commons:commons-lang3:3.3.2",
+            commons_logging             : "commons-logging:commons-logging:1.1.3",
+            commons_math                : "org.apache.commons:commons-math:2.1",
+            commons_net                 : "org.apache.commons:commons-net:3.1",
+            cglib                       : "cglib:cglib:3.1",
+            commons_dbcp                : "apache:commons-dbcp:1.2.2",
+            commons_pool                : "commons-pool:commons-pool:1.5.6",
+
+            //cucumber
+            cucumber_java               : "info.cukes:cucumber-java:${versions.cucumber}",
+            cucumber_junit              : "info.cukes:cucumber-junit:${versions.cucumber}",
+            cucumber_spring             : "info.cukes:cucumber-spring:${versions.cucumber}",
+
+            c3p0                        : "c3p0:c3p0:${versions.c3p0}",
+
+            /** D **/
+            dbunit                      : "org.dbunit:dbunit:${versions.dbunit}",
+            dozer                       : "net.sf.dozer:dozer:5.5.1",
+            dom4j                       : "dom4j:dom4j:1.6.1",
+            disruptor                   : "com.lmax:disruptor:3.3.2",
+
+            /** E **/
+            ehcache_core                : "net.sf.ehcache:ehcache-core:2.6.10",
+
+            /** F **/
+            findbugs_annotations        : "edu.umd.cs:findbugs-annotations:1.3.9-1",
+            freemarker                  : "org.freemarker:freemarker:2.3.19",
+            fluent_hc                   : "org.apache.httpcomponents:fluent-hc:4.5",
+            fastjson                    : "com.alibaba:fastjson:1.2.3",
+            fileupload                  : "commons-fileupload:commons-fileupload:1.3",
+
+            /** G **/
+            googlecode_concurrenthashmap: "com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:1.4.2",
+            gmbal_api_only              : "org.glassfish:gmbal-api-only:3.0.0-b023",
+            grizzly_framework           : "org.glassfish:grizzly-framework:${versions.grizzly}",
+            grizzly_http                : "org.glassfish:grizzly-http:${versions.grizzly}",
+            grizzly_http_server         : "org.glassfish:grizzly-http-server:${versions.grizzly}",
+            grizzly_http_servlet        : "org.glassfish:grizzly-http-servlet:${versions.grizzly}",
+            grizzly_rcm                 : "org.glassfish:grizzly-rcm:${versions.grizzly}",
+            guava                       : "com.google.guava:guava:16.0.1",
+            guice                       : "com.google.inject:guice:3.0",
+            gherkin                     : "info.cukes:gherkin:2.12.2",
+
+            /** H **/
+            //hadoop
+            hadoop_auth                 : "org.apache.hadoop:hadoop-auth:2.2.0",
+            hadoop_common               : "org.apache.hadoop:hadoop-common:2.2.0",
+            //hbase
+            hbase_annotations           : "org.apache.hadoop.hbase:hbase-annotations:${versions.hbase}",
+            hbase_client                : "org.apache.hadoop.hbase:hbase-client:${versions.hbase}",
+            hbase_common                : "org.apache.hadoop.hbase:hbase-common:${versions.hbase}",
+            hbase_examples              : "org.apache.hadoop.hbase:hbase-examples:${versions.hbase}",
+            hbase_hadoop_compat         : "org.apache.hadoop:hbase-hadoop-compat:${versions.hbase}",
+            hbase_hadoop2_compat        : "org.apache.hadoop:hbase-hadoop2-compat:${versions.hbase}",
+            hbase_it                    : "org.apache.hadoop.hbase:hbase-it:${versions.hbase}",
+            hbase_prefix_tree           : "org.apache.hadoop.hbase:hbase-prefix-tree:${versions.hbase}",
+            hbase_protocol              : "org.apache.hadoop.hbase:hbase-protocol:${versions.hbase}",
+            hbase_rest                  : "org.apache.hadoop.hbase:hbase-rest:${versions.hbase}",
+            hbase_server                : "org.apache.hadoop.hbase:hbase-server:${versions.hbase}",
+            htrace_core                 : "org.cloudera.htrace:htrace-core:2.04",
+
+            hamcrest_all                : "org.hamcrest:hamcrest-all:${versions.hamcrest}",
+            hbase_checkstyle            : "org.apache.hadoop.hbase:hbase-checkstyle:${versions.hbase}",
+
+            //hbase-common-0.98.13-hadoop2-tests.jar
+            //hbase_server-0.98.13-hadoop2-tests:	"org.apache.hadoop.hbase:hbase-server-0.98.13-hadoop2-tests:",
+            //hbase_common-0.98.13-hadoop2-tests:	"org.apache.hadoop.hbase:hbase-server-0.98.13-hadoop2-tests:",
+
+            httpclient                  : "org.apache.httpcomponents:httpclient:4.3",
+            hamcrest_all                : "org.hamcrest:hamcrest-all:${versions.hamcrest}",
+
+            /** J **/
+            json_lib                    : "net.sf.json-lib:json-lib:2.3",
+            junit                       : "junit:junit:${versions.junit}",
+            jcl_over_slf4j              : "org.slf4j:jcl-over-slf4j:${versions.slf4j}",
+            jul_to_slf4j                : "org.slf4j:jul-to-slf4j:${versions.slf4j}",
+            junit_dep                   : "junit:junit-dep:${versions.junit}",
+            jackson_core                : "com.fasterxml.jackson.core:jackson-core:${versions.jackson}",
+            jackson_databind            : "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}",
+            jackson_annotations         : "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}",
+            jackson_mapper_asl          : "org.codehaus.jackson:jackson-mapper-asl:1.9.12",
+            jackson_dataformat_xml      : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.5.1",
+            joda_time                   : "joda-time:joda-time:2.4",
+            jstl                        : "jstl:jstl:1.2",
+            javassist                   : "org.javassist:javassist:3.17.1-GA",
+            jzlib                       : "com.jcraft:jzlib:1.1.3",
+
+            jooby                       : "org.jooby:jooby:0.9.1",
+
+            /** K **/
+            kafka_clients               : "org.apache.kafka:kafka-clients:${versions.kafka}",
+            kafka_2                     : "org.apache.kafka:kafka_2.10:${versions.kafka}",
+
+            /** L **/
+            log4j                       : "log4j:log4j:${versions.log4j}",
+
+            /** M **/
+
+            mockito_all                 : "org.mockito:mockito-all:${versions.mockito}",
+
+            //mybatis
+            mybatis                     : "org.mybatis:mybatis:${versions.mybatis_version}",
+            mybatis_spring              : "org.mybatis:mybatis-spring:${versions.mybatis_spring_version}",
+
+            //mongodb:							"org.mongodb:mongo-java-driver:2.9.3",
+            mongodb                     : "org.mongodb:mongo-java-driver:${versions.mongodb_version}",
+            morphia                     : "com.github.jmkgreen.morphia:morphia:${versions.morphia_version}",
+
+            msgpack                     : "org.msgpack:msgpack:0.6.12",
+            msgpack_core                : "org.msgpack:msgpack-core:0.7.0-p9",
+            mysql                       : "mysql:mysql-connector-java:${versions.mysqldb}",
+            metrics_core                : "com.yammer.metrics:metrics-core:2.2.0",
+
+            /** N **/
+            netty                       : "io.netty:netty:4.0.29.Final",
+
+            /** O **/
+            oracle                      : "oracle:ojdbc6:11.2.0.3.0",
+            activemq_all                : "org.apache.activemq:activemq-all:${versions.activemq}",
+            activemq_pool               : "org.apache.activemq:activemq-pool:${versions.activemq}",
+            activemq_jms_pool           : "org.apache.activemq:activemq-jms-pool:${versions.activemq}",
+
+            /** P **/
+            postgresql                  : "org.postgresql:postgresql:${versions.postgresql_version}",
+            protobuf_java               : "com.google.protobuf:protobuf-java:2.6.1",
+            protobuf_rpc_pro_duplex     : "com.googlecode.protobuf-rpc-pro:protobuf-rpc-pro-duplex:3.3",
+            protostuff_runtime          : "com.dyuproject.protostuff:protostuff-runtime:1.0.9",
+            protostuff_core             : "com.dyuproject.protostuff:protostuff-core:1.0.9",
+
+            /** Q **/
+            quartz                      : "org.quartz-scheduler:quartz:2.2.1",
+
+            /** R **/
+            redis                       : "redis.clients:jedis:2.1.0",
+
+            /** S **/
+
+            // spring
+            spring_framework_bom        : "org.springframework:spring-framework-bom:${versions.spring}",
+            spring_core                 : "org.springframework:spring-core:${versions.spring}",
+            spring_aop                  : "org.springframework:spring-aop:${versions.spring}",
+            spring_agent                : 'org.springframework:spring-agent:2.5.6',
+            spring_aspects              : "org.springframework:spring-aspects:${versions.spring}",
+            spring_context              : "org.springframework:spring-context:${versions.spring}",
+            spring_context_support      : "org.springframework:spring-context-support:4.2.2.RELEASE",
+            spring_expression           : "org.springframework:spring-expression:${versions.spring}",
+            spring_instrument           : "org.springframework:spring-instrument:${versions.spring}",
+            spring_jdbc                 : "org.springframework:spring-jdbc:${versions.spring}",
+            spring_orm                  : "org.springframework:spring-orm:${versions.spring}",
+            spring_test                 : "org.springframework:spring-test:${versions.spring}",
+            spring_tx                   : "org.springframework:spring-tx:${versions.spring}",
+            spring_web                  : "org.springframework:spring-web:${versions.spring}",
+            spring_webmvc               : "org.springframework:spring-webmvc:${versions.spring}",
+            spring_jms                  : "org.springframework:spring-jms:${versions.spring_jms}",
+            spring_session              : "org.springframework.session:spring-session:${versions.spring_session}",
+            spring_session_data_redis   : "org.springframework.session:spring-session-data-redis:${versions.spring_session}",
+
+            //slf4j
+            slf4j_api                   : "org.slf4j:slf4j-api:${versions.slf4j}",
+            servlet_api                 : "javax.servlet:servlet-api:${versions.javax_servlet_api}",
+            slf4j_log4j12               : "org.slf4j:slf4j-log4j12:${versions.slf4j}",
+
+            scala_library               : "org.scala-lang:scala-library:2.10.4",
+
+            standard                    : "taglibs:standard:1.1.2",
+            stax2_api                   : "org.codehaus.woodstox:stax2-api:3.1.4",
+            shiro_core                  : "org.apache.shiro:shiro-core:1.2.3",
+            shiro_web                   : "org.apache.shiro:shiro-web:1.2.3",
+
+            /** X **/
+            xstream                     : "com.thoughtworks.xstream:xstream:1.4.8",
+            xstream_parent              : "com.thoughtworks.xstream:xstream-parent:1.4.8",
+
+            /** Y **/
+            yuicompressor               : "com.paic.bces_ibp:yuicompressor:2.4.2",
+            /** Z **/
+            zkclient                    : "com.101tec:zkclient:0.3",
+            zookeeper                   : "org.apache.zookeeper:zookeeper:3.4.6"
+
+    ]
+}

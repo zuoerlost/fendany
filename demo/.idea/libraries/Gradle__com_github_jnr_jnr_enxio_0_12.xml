@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.jnr:jnr-enxio:0.12">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-enxio/0.12/f388b6eabf6597c1c2844452ae9d608ef01651ae/jnr-enxio-0.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jnr/jnr-enxio/0.12/f1246132866733c16c83eafa50de02b6c327c6fe/jnr-enxio-0.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

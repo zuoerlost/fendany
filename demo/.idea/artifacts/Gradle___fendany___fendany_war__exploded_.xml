@@ -1,0 +1,65 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : fendany : fendany.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/demo/exploded/fendany.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="demo_main/web/Web Gradle : fendany.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="demo_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/fastjson-1.2.12.jar" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context-support:4.2.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jdbc:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jms:4.2.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.2.4.RELEASE" />
+          <element id="library" level="project" name="Gradle: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-log4j12:1.7.6" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.3.2" />
+          <element id="library" level="project" name="Gradle: commons-io:commons-io:2.4" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.4.1" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.4.1" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpmime:4.3.1" />
+          <element id="library" level="project" name="Gradle: com.github.jnr:jnr-ffi:2.0.9" />
+          <element id="library" level="project" name="Gradle: com.github.jnr:jnr-constants:0.9.1" />
+          <element id="library" level="project" name="Gradle: com.github.jnr:jnr-enxio:0.12" />
+          <element id="library" level="project" name="Gradle: com.github.jnr:jnr-posix:3.0.29" />
+          <element id="library" level="project" name="Gradle: commons-pool:commons-pool:1.5.6" />
+          <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.9" />
+          <element id="library" level="project" name="Gradle: javax.websocket:javax.websocket-api:1.1" />
+          <element id="library" level="project" name="Gradle: junit:junit:4.8.2" />
+          <element id="library" level="project" name="Gradle: com.jcraft:jsch:0.1.54" />
+          <element id="library" level="project" name="Gradle: com.alibaba:fastjson:1.2.17" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-messaging:4.2.2.RELEASE" />
+          <element id="library" level="project" name="Gradle: com.github.jnr:jffi:1.2.11" />
+          <element id="library" level="project" name="Gradle: com.github.jnr:jffi:native:1.2.11" />
+          <element id="library" level="project" name="Gradle: org.ow2.asm:asm:5.0.3" />
+          <element id="library" level="project" name="Gradle: org.ow2.asm:asm-commons:5.0.3" />
+          <element id="library" level="project" name="Gradle: org.ow2.asm:asm-analysis:5.0.3" />
+          <element id="library" level="project" name="Gradle: org.ow2.asm:asm-tree:5.0.3" />
+          <element id="library" level="project" name="Gradle: org.ow2.asm:asm-util:5.0.3" />
+          <element id="library" level="project" name="Gradle: com.github.jnr:jnr-x86asm:1.0.2" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.6" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/3.5.1/8e20e3b9b687c5abbfbf684b2dbf9d8fb8c9691e/jna-3.5.1.jar" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.5.1/1f171f6ba3065d320488d3a6672852a7e04035a3/platform-3.5.1.jar" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/classes/artifacts/demo/exploded/fendany.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
