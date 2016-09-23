@@ -44,7 +44,7 @@ public class UnixSocketInputStream extends InputStream {
         byte[] data = new byte[1];
         int read = read(data);
         if (read != 1) {
-            throw new IOException("read(..): could not read one byte");
+            throw new IOException("【UnixSocketInputStream】【read】: could not read one byte");
         }
         return (int) data[0];
     }
@@ -60,7 +60,7 @@ public class UnixSocketInputStream extends InputStream {
         if (offset == 0) {
             readLength = this.unixSocket.read(data, length);
         } else {
-            throw new IOException("read(..): offset not supported");
+            throw new IOException("【UnixSocketInputStream】【read】: offset not supported");
         }
         return readLength;
     }

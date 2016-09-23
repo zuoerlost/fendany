@@ -17,8 +17,8 @@ import org.apache.commons.logging.LogFactory;
 
 /**
  * 2016年09月22日17:09:05
- * @author zhangbaisong083
  *
+ * @author zhangbaisong083
  */
 public class UnixSocket extends Socket {
 
@@ -40,7 +40,7 @@ public class UnixSocket extends Socket {
 
     public UnixSocket(String path) throws SocketException {
         if (Platform.isWindows() || Platform.isWindowsCE()) {
-            throw new SocketException("loadLibrary(): Unix sockets are not supported on Windows platforms");
+            throw new SocketException("【UnixSocket】:Unix sockets are not supported on Windows platforms");
         }
 
         library = (UnixSocketImpl) Native.loadLibrary(LIBC, UnixSocketImpl.class);

@@ -30,10 +30,10 @@ public class UnixSocketOutputStream extends OutputStream {
         if (offset == 0) {
             int writtenLength = this.unixSocket.write(data, length);
             if (writtenLength != length) {
-                throw new IOException("write(..): length is " + length + " but only wrote " + writtenLength);
+                throw new IOException("【UnixSocketOutputStream】【write】: length is " + length + " but only wrote " + writtenLength);
             }
         } else {
-            throw new IOException("write(..): offset not supported");
+            throw new IOException("【UnixSocketOutputStream】【write】: offset not supported");
         }
     }
 
