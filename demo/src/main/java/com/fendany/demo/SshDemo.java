@@ -13,10 +13,6 @@ import java.util.Scanner;
 
 /**
  * Created by zuoer on 16-9-19.
- *
- *
- *
- *
  */
 public class SshDemo {
 
@@ -142,37 +138,6 @@ public class SshDemo {
             channel.connect();
             new Thread(new Write(outstream)).start();
             new Thread(new Read(instream)).start();
-            //获取命令执行的结果
-//            if (instream.available() > 0) {
-//                byte[] data = new byte[instream.available()];
-//                int nLen = instream.read(data);
-//
-//                if (nLen < 0) {
-//                    throw new Exception("network error.");
-//                }
-//
-//                //转换输出结果并打印出来
-//                String temp = new String(data, 0, nLen, "iso8859-1");
-//                System.out.println(temp);
-//            } else {
-//                System.out.println(" no inputStream ");
-//            }
-//
-//            //获取命令执行的结果
-//            if (extStream.available() > 0) {
-//                byte[] data = new byte[extStream.available()];
-//                int nLen = extStream.read(data);
-//
-//                if (nLen < 0) {
-//                    throw new Exception("network error.");
-//                }
-//
-//                //转换输出结果并打印出来
-//                String temp = new String(data, 0, nLen, "iso8859-1");
-//                System.err.println(temp);
-//            } else {
-//                System.out.println(" no extStream ");
-//            }
 
 //            extStream.close();
 //            outstream.close();
@@ -185,9 +150,9 @@ public class SshDemo {
         }
     }
 
-    static class Read implements Runnable {
+    private static class Read implements Runnable {
 
-        InputStream is;
+        public InputStream is;
 
         public Read(InputStream is) {
             this.is = is;

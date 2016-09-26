@@ -1,5 +1,6 @@
 package com.fendany.demo;
 
+import com.fendany.utils.ssh.SSHConnection;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -27,7 +28,7 @@ public class SshWs {
         LOG.info(" 【ws】: NEW session at " + id);
         SSHConnection sshConnection = new SSHConnection() {
             @Override
-            protected void readMessage(String message, String id) {
+            public void readMessage(String message, String id) {
                 try {
                     sendMessage(message, session);
                 } catch (IOException e) {
@@ -50,6 +51,8 @@ public class SshWs {
         String id = session.getId();
         SSHConnection sshConnection = SSH_CACHE.remove(id);
         sshConnection.close();
+        // 这个东西不能关，一关就会报错
+//        session.close();
     }
 
     /**

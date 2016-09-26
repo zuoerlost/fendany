@@ -47,21 +47,22 @@ public class UnixSocket extends Socket {
         this.sockfd = socket(AF_UNIX, SOCK_STREAM, PROTOCOL);
 
         try {
+
             UnixSocketAddress socketAddress = new UnixSocketAddress();
             socketAddress.setFamily(AF_UNIX);
             socketAddress.setPath(path);
-            int i = this.connect(socketAddress, socketAddress.size());
 
+            int i = this.connect(socketAddress, socketAddress.size());
             if (i != 0) {
                 new SocketException("【UnixSocket】: could not connect to socket");
             }
 
+            this.is = new BufferedInputStream(new UnixSocketInputStream(this));
+            this.os = new BufferedOutputStream(new UnixSocketOutputStream(this));
+
         } catch (LastErrorException lee) {
             throwSocketException("【UnixSocket】: could not connect to socket", lee);
         }
-
-        this.is = new BufferedInputStream(new UnixSocketInputStream(this));
-        this.os = new BufferedOutputStream(new UnixSocketOutputStream(this));
     }
 
 

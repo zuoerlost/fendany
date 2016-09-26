@@ -22,6 +22,11 @@ public class TestUnixSocket {
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "\r\n";
 
+        String data_stats = "GET /v1.23/containers/68e0e0821b24/stats?stream=1 HTTP/1.1\r\n" +
+                "Host: \r\n" +
+                "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
+                "\r\n";
+
         InputStream inputStream = unixSocket.getInputStream();
         OutputStream outputStream = unixSocket.getOutputStream();
 
@@ -34,41 +39,11 @@ public class TestUnixSocket {
         Thread thread = new Thread(new TestUnixSocket.Read(inputStream));
         thread.start();
 
-//        byte[] buffer = new byte[1];
-//        for(int pom = 0 ;!new String(buffer).equals("\r\n"); pom ++ ){
-//            inputStream.read(buffer,0,buffer.length);
-//            System.out.print(new String(buffer));
-//        }
-
-//        byte[] bytes = new byte[859];
-//        int length = inputStream.read(bytes,0,bytes.length);
-//        System.out.println(length);
-//        System.out.println(new String(bytes));
-
-//        DataInputStream dataInputStream = new DataInputStream(inputStream);
-//        String line = dataInputStream.readUTF();
-//        while( line != null ){
-//            System.out.println(line);
-//            line = dataInputStream.readUTF();
-//        }
-
-//        BufferedReader bufferedReader = new BufferedReader(new ReaderUTF8(inputStream));
-//        String line = bufferedReader.readLine();
-//        while (line != null ) {
-//            System.out.println(line);
-//            line = bufferedReader.readLine();
-//        }
-
-//        InputStreamReader r = new InputStreamReader(inputStream);
-//        CharBuffer result = CharBuffer.allocate(1024);
-//        r.read(result);
-//        result.flip();
-//        System.out.println("read from server: " + result.toString());
     }
 
     private static class Read implements Runnable {
 
-        InputStream is;
+        public InputStream is;
 
         public Read(InputStream is) {
             this.is = is;
@@ -88,10 +63,9 @@ public class TestUnixSocket {
                     readByte = future.get();
                     if (readByte >= 0) {
                         String message = new String(buffer, 0, readByte);
-                        System.out.println(message);
+                        System.out.print(message);
                     }
                 }
-
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {

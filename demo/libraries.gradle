@@ -65,7 +65,6 @@ ext {
             commons_daemon              : "org.apache.commons:commons-daemon:1.0.13",
             commons_digester            : "org.apache.commons:commons-digester:1.8",
             commons_el                  : "org.apache.commons:commons-el:1.0",
-            //commons_httpclient:					"org.apache.commons:commons-httpclient:3.1",
             commons_io                  : "commons-io:commons-io:2.4",
             commons_lang                : "commons-lang:commons-lang:2.6",
             commons_lang3               : "org.apache.commons:commons-lang3:3.3.2",

@@ -1,4 +1,4 @@
-package com.fendany.demo;
+package com.fendany.utils.ssh;
 
 import com.jcraft.jsch.Channel;
 import com.jcraft.jsch.JSch;
@@ -15,9 +15,9 @@ import java.util.concurrent.*;
 
 /**
  * Created by zuoer on 16-9-20.
- *
+ * 1.目前实现了本地SSH调用，还没有实现远程SSH调用
  */
-public abstract class SSHConnection {
+public abstract class SSHConnection implements SSHReadMessage {
 
     private static Log log = LogFactory.getLog(SSHConnection.class);
 
@@ -39,10 +39,9 @@ public abstract class SSHConnection {
 
     private OutputStream osStream = null;
 
-    private ExecutorService executorService = Executors.newFixedThreadPool(1);
+    private ExecutorService executorService = Executors.newSingleThreadExecutor();
 
-
-    protected void init(String ip, String username, String password, int port) {
+    public void init(String ip, String username, String password, int port) {
         this.id = UUID.randomUUID().toString();
         this.ip = ip.trim();
         this.port = port;
@@ -50,21 +49,22 @@ public abstract class SSHConnection {
         this.password = password.trim();
     }
 
-    protected void init(String ip, String username, String password) {
+    public void init(String ip, String username, String password) {
         init(ip, username, password, 22);
     }
 
-    protected void init(String username, String password, int port) {
+    public void init(String username, String password, int port) {
         init("127.0.0.1", username, password, port);
     }
 
-    protected void init(String username, String password) {
+    public void init(String username, String password) {
         init("127.0.0.1", username, password, 22);
     }
 
-    protected void connect() throws Exception {
+    public void connect() throws Exception {
         try {
-            session = (new JSch()).getSession(this.username, this.ip, this.port);
+            JSch jSch = new JSch();
+            session = jSch.getSession(this.username, this.ip, this.port);
             session.setPassword(this.password);
             session.setConfig("StrictHostKeyChecking", "no");
             session.connect(20000);
@@ -83,7 +83,7 @@ public abstract class SSHConnection {
         }
     }
 
-    protected String close() throws IOException {
+    public String close() throws IOException {
         executorService.shutdownNow();
         osStream.close();
         inStream.close();
@@ -92,9 +92,7 @@ public abstract class SSHConnection {
         return id;
     }
 
-    protected abstract void readMessage(String message,String id);
-
-    protected void writeCommand(String command){
+    public void writeCommand(String command) {
         try {
             osStream.write((command).getBytes());
             osStream.flush();
@@ -102,10 +100,14 @@ public abstract class SSHConnection {
             e.printStackTrace();
         }
     }
+    
+    public String getId() {
+        return id;
+    }
 
     private class Read implements Runnable {
 
-        InputStream is;
+        public InputStream is;
 
         public Read(InputStream is) {
             this.is = is;
@@ -116,7 +118,6 @@ public abstract class SSHConnection {
             final byte[] buffer = new byte[1024];
             ExecutorService executor = null;
             //读取数据的阻塞时的超时时间
-            int readTimeout = 1000000000;
             try {
                 executor = Executors.newFixedThreadPool(1);
                 //这个线程主要是用于处理读取数据read阻塞超时的处理
@@ -124,25 +125,26 @@ public abstract class SSHConnection {
                 int readByte = 1;
                 while (readByte >= 0) {
                     Future<Integer> future = executor.submit(readTask);
-                    readByte = future.get(readTimeout, TimeUnit.MILLISECONDS);
+                    readByte = future.get();
                     if (readByte >= 0) {
                         String message = new String(buffer, 0, readByte);
-                        readMessage(message,id);
+                        readMessage(message, id);
                     }
                 }
-
-            } catch (TimeoutException e) {
-                log.error("read the response message timeout");
             } catch (Exception e) {
                 log.error("read the response message have an exception:" + e.getMessage());
             } finally {
-                executor.shutdownNow();
-                log.info("finish to read the data!");
+                try {
+                    log.info("finish to read the data!");
+                    executor.shutdownNow();
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    log.error(" close error : " + e.getMessage(), e);
+                }
             }
         }
     }
 
-    protected String getId() {
-        return id;
-    }
+
 }
