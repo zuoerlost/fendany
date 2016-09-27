@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="jnr.unixsocket.BasicFunctionalityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-09-20T03:18:35" hostname="zuoer-K53SV" time="0.09">
-  <properties/>
-  <testcase name="basicOperation" classname="jnr.unixsocket.BasicFunctionalityTest" time="0.09"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

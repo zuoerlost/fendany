@@ -220,8 +220,8 @@ public class SshDemo {
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        sshShell("zuoer", "112");
-    }
+//    public static void main(String[] args) throws Exception {
+//        sshShell("zuoer", "112");
+//    }
 
 }

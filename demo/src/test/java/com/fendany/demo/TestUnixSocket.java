@@ -1,6 +1,7 @@
 package com.fendany.demo;
 
 import com.fendany.utils.unix.UnixSocket;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +15,8 @@ import java.util.concurrent.*;
  */
 public class TestUnixSocket {
 
-    public static void main(String[] args) throws IOException {
+//    @Test
+    public void test() throws IOException {
         String filePath = "/tmp/docker.sock";
         UnixSocket unixSocket = new UnixSocket(filePath);
         String data = "GET /v1.23/containers/json?all=1 HTTP/1.1\r\n" +
@@ -50,7 +52,7 @@ public class TestUnixSocket {
         }
 
         public void run() {
-            final byte[] buffer = new byte[1024];
+            final byte[] buffer = new byte[1];
             ExecutorService executor = null;
             try {
                 executor = Executors.newFixedThreadPool(1);
@@ -61,7 +63,7 @@ public class TestUnixSocket {
                     Future<Integer> future = executor.submit(readTask);
                     //抛弃阻塞时间
                     readByte = future.get();
-                    if (readByte >= 0) {
+                    if (readByte > 0) {
                         String message = new String(buffer, 0, readByte);
                         System.out.print(message);
                     }

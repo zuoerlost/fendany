@@ -5,10 +5,7 @@ package com.fendany.demo;
  */
 public class Test4Unint32Exchange {
 
-    private static void test00() {
-
-//        Math.
-
+    private void test00() {
 
         byte[] tmpByte = {88, 127, 89, 1};
 
@@ -18,10 +15,6 @@ public class Test4Unint32Exchange {
             s |= (tmpByte[i] & 0x000000ff);
             System.out.println(s);
         }
-    }
-
-    public static void main(String[] args) {
-        test00();
     }
 
 }

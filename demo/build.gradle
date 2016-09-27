@@ -4,10 +4,23 @@ apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'jetty'
+//apply plugin: 'spring-boot'
 
 group 'fendany'
 version '1.0-SNAPSHOT'
+
+buildscript{
+    
+}
+
+jar {
+    baseName = 'fendany'
+    archiveName = 'fendany.jar'
+    version = '0.0.1'
+//    manifest {
+//        attributes 'Main-Class':'com.fendany.MainApplication'
+//    }
+}
 
 war {
     baseName = 'fendany'
@@ -23,23 +36,6 @@ repositories {
 
 dependencies {
 
-    compile(libraries.aopalliance)
-    compile(libraries.spring_core)
-    compile(libraries.spring_aop)
-    compile(libraries.spring_context)
-    compile(libraries.spring_context_support)
-    compile(libraries.spring_expression)
-    compile(libraries.spring_jdbc)
-    compile(libraries.spring_tx)
-    compile(libraries.spring_web)
-    compile(libraries.spring_webmvc)
-    compile(libraries.spring_jms)
-    compile("org.springframework:spring-beans:${versions.spring}")
-
-    compile(libraries.log4j)
-    compile(libraries.slf4j_api)
-    compile("org.slf4j:slf4j-log4j12:1.7.6")
-
     compile(libraries.commons_lang3)
     compile(libraries.commons_logging)
     compile(libraries.commons_io)
@@ -51,15 +47,7 @@ dependencies {
     compile("org.apache.httpcomponents:httpclient:4.4.1")
     compile("org.apache.httpcomponents:httpmime:4.3.1")
 
-    compile("javax.websocket:javax.websocket-api:1.1")
-
-    compile fileTree(dir: new File(rootProject.rootDir, 'libs').getAbsolutePath(),
-            includes: [
-                    "**/*.jar"
-            ])
-
     compile("junit:junit:4.8.2")
-
     compile("com.jcraft:jsch:0.1.54")
     compile("com.alibaba:fastjson:1.2.17")
 
@@ -67,12 +55,15 @@ dependencies {
     compile("net.java.dev.jna:jna:3.5.1")
     compile("net.java.dev.jna:platform:3.5.1")
 
+    // Spring Boot
+    compile("org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-websocket:1.4.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-devtools:1.4.1.RELEASE")
+    // 服务器密码校验，及身份验证
+//    compile("org.springframework.boot:spring-boot-starter-security:1.4.1.RELEASE")
 
-}
-
-jettyRun {
-    httpPort 8888
-    contextPath "fendany"
-    scanIntervalSeconds 0
-    reload "automatic"
+//    compile fileTree(dir: new File(rootProject.rootDir, 'libs').getAbsolutePath(),
+//            includes: [
+//                    "**/*.jar"
+//            ])
 }

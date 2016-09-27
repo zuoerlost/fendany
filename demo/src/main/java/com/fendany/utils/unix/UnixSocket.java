@@ -124,7 +124,7 @@ public class UnixSocket extends Socket {
             int length = this.library.write(this.sockfd, buffer, count);
             return length;
         } catch (LastErrorException lee) {
-            throwIOException("【UnixSocket】【write】: could not write to socket", lee);
+            throwIOException("【UnixSocket】【send】: could not send to socket", lee);
             return -1;
         }
     }

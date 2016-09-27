@@ -5,8 +5,4 @@ package com.fendany.demo.PerformanceTesting;
  */
 public class UnixSocket {
 
-    public static void main(String[] args) {
-        long time = System.currentTimeMillis();
-    }
-
 }

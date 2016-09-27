@@ -1,22 +1,23 @@
 package com.fendany.demo;
 
+import org.junit.Test;
+
 /**
  * Created by zuoer on 16-9-18.
- *
+ * <p>
  * Unint32 测试类
  */
 public class Test4Unint32 {
 
-
-    public static void test(Uint32 num) {
+    public void test(Uint32 num) {
         System.out.println(num == null ? "null" : num.getValue());
     }
 
     /**
      * 大端模式
      */
-    public static void test00() {
-
+    @Test
+    public void test00() {
         byte[] header = new byte[4];
         int length = 99999;
         header[0] = (byte) ((length >>> 24) & 0xff);
@@ -25,7 +26,14 @@ public class Test4Unint32 {
         header[3] = (byte) (length & 0xff);
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test01() {
+        String temp = "111111111asdasd";
+        System.out.println(temp.indexOf("a"));
+    }
+
+    @Test
+    public void test02() {
         Uint32 min = Uint32.MIN_VALUE;
         Uint32 max = Uint32.MAX_VALUE;
         Uint32 a = new Uint32(4294967295L);
@@ -42,4 +50,5 @@ public class Test4Unint32 {
 
         System.out.println(a.equals(max));
     }
+
 }
