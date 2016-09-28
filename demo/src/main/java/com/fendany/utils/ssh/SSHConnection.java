@@ -83,6 +83,20 @@ public abstract class SSHConnection implements SSHReadMessage {
         }
     }
 
+    public void security(String privateKey, String passphrase) throws JSchException {
+        JSch jSch = new JSch();
+        //设置密钥和密码
+        if (privateKey != null && !"".equals(privateKey)) {
+            if (passphrase != null && "".equals(passphrase)) {
+                //设置带口令的密钥
+                jSch.addIdentity(privateKey, passphrase);
+            } else {
+                //设置不带口令的密钥
+                jSch.addIdentity(privateKey);
+            }
+        }
+    }
+
     public String close() throws IOException {
         executorService.shutdownNow();
         osStream.close();
@@ -100,7 +114,7 @@ public abstract class SSHConnection implements SSHReadMessage {
             e.printStackTrace();
         }
     }
-    
+
     public String getId() {
         return id;
     }

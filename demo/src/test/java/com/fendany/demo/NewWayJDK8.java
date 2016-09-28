@@ -1,5 +1,7 @@
 package com.fendany.demo;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -10,7 +12,6 @@ import java.util.List;
  * JDK8 新特性
  */
 public class NewWayJDK8 {
-
 
     /**
      * 接口可以支持扩展，方便为之前的代码进行更新
@@ -27,7 +28,8 @@ public class NewWayJDK8 {
     /**
      * default 不需要重新实现，可直接调用
      */
-    private static void test00() {
+    @Test
+    public static void test00() {
 
         Formula formula = new Formula() {
             @Override
@@ -42,7 +44,8 @@ public class NewWayJDK8 {
     /**
      * 好吧 这个简直不要太嚣张
      */
-    private static void test01() {
+    @Test
+    public static void test01() {
         // 之前版本的写法
         List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
         Collections.sort(names, new Comparator<String>() {
@@ -78,7 +81,8 @@ public class NewWayJDK8 {
 
     }
 
-    private static void test02() {
+    @Test
+    public static void test02() {
         Converter<String, Integer> converter = (from) -> Integer.valueOf(from);
         Integer converted = converter.convert("123");
         System.out.println(converted);    // 123
@@ -89,7 +93,8 @@ public class NewWayJDK8 {
      * 代码还可以通过静态方法引用来表示：
      * Java 8 允许你使用 :: 关键字来传递方法或者构造函数引用，上面的代码展示了如何引用一个静态方法，我们也可以引用一个对象的方法：
      */
-    private static void test03() {
+    @Test
+    public void test03() {
         Converter<String, Integer> converter = Integer::valueOf;
         Integer converted = converter.convert("123");
         System.out.println(converted);   // 123
@@ -138,7 +143,8 @@ public class NewWayJDK8 {
      * 感觉并不会有什么实际的意义
      * 首先在工厂模式中，参数的改变也是有必要的
      */
-    private static void test04() {
+    @Test
+    public void test04() {
         PersonFactory<Person> personFactory = Person::new;
         Person person = personFactory.work("Peter", "Parker");
         System.out.println(person);
@@ -147,7 +153,8 @@ public class NewWayJDK8 {
     /**
      * 建议还是都添加final吧，其实是一样的
      */
-    private static void test05() {
+    @Test
+    public void test05() {
         final int num = 1;
         int sum = 2;
         Converter<Integer, String> stringConverter =
@@ -160,7 +167,4 @@ public class NewWayJDK8 {
 //        sum = 3;
     }
 
-    public static void main(String[] args) {
-        test04();
-    }
 }

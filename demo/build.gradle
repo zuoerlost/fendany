@@ -1,30 +1,36 @@
 apply from: 'libraries.gradle'
 
 apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+//当有war的插件时，将不会打包成war
+//apply plugin: 'war'
 
 group 'fendany'
 version '1.0-SNAPSHOT'
 
-jar {
-    baseName = 'fendany'
-    archiveName = 'fendany.jar'
-    version = '0.0.1'
-    manifest {
-        attributes 'Main-Class':'com.fendany.MainApplication'
-//        attributes 'Class-Path':configurations.runtime.collect{}
-    }
+bootRepackage {
+    mainClass = 'com.fendany.MainApplication'
 }
 
-war {
-    baseName = 'fendany'
-    archiveName = 'fendany.war'
-    version = '1.0.0'
-}
+//war {
+//    baseName = 'fendany'
+//    archiveName = 'fendany.war'
+//    version = '1.0.0'
+//}
 
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+buildscript {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
 
 repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
@@ -55,6 +61,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.4.1.RELEASE")
     compile("org.springframework.boot:spring-boot-starter-websocket:1.4.1.RELEASE")
     compile("org.springframework.boot:spring-boot-devtools:1.4.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     // 服务器密码校验，及身份验证
 //    compile("org.springframework.boot:spring-boot-starter-security:1.4.1.RELEASE")
 

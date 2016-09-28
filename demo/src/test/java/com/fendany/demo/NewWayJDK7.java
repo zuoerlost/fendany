@@ -1,5 +1,7 @@
 package com.fendany.demo;
 
+import org.junit.Test;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -23,6 +25,7 @@ public class NewWayJDK7 {
      * 测试使用1.7 集合快速创建特性，失败，2016年08月19日11:03:35
      * 应该不是真的。因为连JDK8 都没有提到这个东西
      */
+    @Test
     private void test01() {
 
 //        final List<String> list = ["item"];
@@ -41,6 +44,7 @@ public class NewWayJDK7 {
     /**
      * 测试try 失败 2016年08月19日11:03:23
      */
+    @Test
     private void test02() throws IOException {
         String path = "";
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
@@ -48,6 +52,7 @@ public class NewWayJDK7 {
         }
     }
 
+    @Test
     private void test03() {
         String s = "test";
         switch (s) {
@@ -67,6 +72,7 @@ public class NewWayJDK7 {
      * 字面分隔符，方便阅读
      * 定义二进制字面值
      */
+    @Test
     private void test04() {
 
         /**
@@ -88,6 +94,7 @@ public class NewWayJDK7 {
      * 文件监控
      * 文件复制
      */
+    @Test
     public void test07() {
         try {
 

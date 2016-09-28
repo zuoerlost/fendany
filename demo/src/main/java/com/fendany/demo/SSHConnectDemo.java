@@ -157,9 +157,4 @@ public class SSHConnectDemo {
             }
         }
     }
-
-//    public static void main(final String[] args) throws Exception {
-//        SSHConnectDemo sshConnectDemo = new SSHConnectDemo("127.0.0.1", "zuoer", "112");
-//        sshConnectDemo.connect();
-//    }
 }
