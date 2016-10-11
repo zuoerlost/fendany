@@ -6,7 +6,8 @@ import org.springframework.context.annotation.ImportResource;
 
 /**
  * Created by zuoer on 16-9-27.
- *
+ * SpringBoot Run
+ * 1.加载配置文件
  */
 @SpringBootApplication
 @ImportResource("classpath:context-main.xml")

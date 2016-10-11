@@ -83,6 +83,9 @@ public abstract class SSHConnection implements SSHReadMessage {
         }
     }
 
+    /**
+     * 目前这个方法比较不清楚，还不知道怎么用
+     */
     public void security(String privateKey, String passphrase) throws JSchException {
         JSch jSch = new JSch();
         //设置密钥和密码

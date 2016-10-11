@@ -29,7 +29,7 @@ public class NewWayJDK8 {
      * default 不需要重新实现，可直接调用
      */
     @Test
-    public static void test00() {
+    public void test00() {
 
         Formula formula = new Formula() {
             @Override
@@ -45,7 +45,7 @@ public class NewWayJDK8 {
      * 好吧 这个简直不要太嚣张
      */
     @Test
-    public static void test01() {
+    public void test01() {
         // 之前版本的写法
         List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
         Collections.sort(names, new Comparator<String>() {
@@ -82,7 +82,7 @@ public class NewWayJDK8 {
     }
 
     @Test
-    public static void test02() {
+    public void test02() {
         Converter<String, Integer> converter = (from) -> Integer.valueOf(from);
         Integer converted = converter.convert("123");
         System.out.println(converted);    // 123
@@ -101,17 +101,10 @@ public class NewWayJDK8 {
     }
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    private static class Person {
+    static class Person {
         String firstName;
         String lastName;
         String fullName;
-
-        Person() {
-        }
-
-        Person(String fullName) {
-            this.fullName = fullName;
-        }
 
         Person(String firstName, String lastName) {
             this.firstName = firstName;

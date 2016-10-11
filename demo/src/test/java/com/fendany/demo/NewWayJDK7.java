@@ -26,26 +26,20 @@ public class NewWayJDK7 {
      * 应该不是真的。因为连JDK8 都没有提到这个东西
      */
     @Test
-    private void test01() {
-
+    public void test01() {
 //        final List<String> list = ["item"];
 //        String item = list[0];
-//
+
 //        Set<String> set = {"item"};
-//
 //        Map<String, Integer> map = {"key" : 1};
 //        int value = map["key"];
-
-
-//        ExecutorService service = Executors.newCachedThreadPool();
-
     }
 
     /**
      * 测试try 失败 2016年08月19日11:03:23
      */
     @Test
-    private void test02() throws IOException {
+    public void test02() throws IOException {
         String path = "";
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             br.readLine();
@@ -53,7 +47,7 @@ public class NewWayJDK7 {
     }
 
     @Test
-    private void test03() {
+    public void test03() {
         String s = "test";
         switch (s) {
             case "test":
@@ -73,7 +67,7 @@ public class NewWayJDK7 {
      * 定义二进制字面值
      */
     @Test
-    private void test04() {
+    public void test04() {
 
         /**
          * 字面值切分

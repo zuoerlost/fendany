@@ -31,7 +31,7 @@ public class TestUnixSocket2 {
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "\r\n";
 
-        String stop = "POST /v1.23/containers/68e0e0821b24/stop?t=10 HTTP/1.1\r\n" +
+        String stop = "POST /v1.23/containers/shanghai/stop?t=10 HTTP/1.1\r\n" +
                 "Host: \r\n" +
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "Content-Length: 0\r\n" +
@@ -72,7 +72,7 @@ public class TestUnixSocket2 {
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "\r\n";
 
-        System.out.println(UnixSocker.INSTANCE.invoke(ps));
+        System.out.println(UnixSocker.INSTANCE.invoke(stop));
     }
 
 }

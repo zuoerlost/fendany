@@ -30,12 +30,12 @@ public enum UnixSocker {
             for (int i = 0; i < loop; i++) {
                 tasks.put(new UnixSockTask(new UnixSocket(path)));
             }
-        }catch (InterruptedException | SocketException e) {
+        } catch (InterruptedException | SocketException e) {
             e.printStackTrace();
         }
     }
 
-    public String invoke(String message)  {
+    public String invoke(String message) {
         try {
             UnixSockTask unixSockTask = tasks.take();
             unixSockTask.send(message);
@@ -46,7 +46,7 @@ public enum UnixSocker {
             return result;
         } catch (IOException | InterruptedException | ExecutionException e) {
             e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }

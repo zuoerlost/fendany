@@ -15,7 +15,8 @@ import java.util.Scanner;
 import java.util.concurrent.*;
 
 /**
- *
+ * 2016年10月08日10:47:08
+ * 尝试远程链接方案
  *
  */
 public class SSHConnectDemo {
