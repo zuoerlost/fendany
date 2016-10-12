@@ -1,25 +1,23 @@
 package com.fendany.doc;
 
-import com.alibaba.fastjson.JSONObject;
-
-import java.util.List;
+import com.alibaba.fastjson.JSONArray;
 
 /**
  * Created by zuoer on 16-10-11.
  */
 public interface DocCommandService {
 
-    List<JSONObject> getRunningContainers();
+    JSONArray getRunningContainers() throws Exception;
 
-    List<JSONObject> getAllContainers();
+    JSONArray getAllContainers() throws Exception;
 
-    JSONObject getLastContainer();
+    JSONArray getLastContainer() throws Exception;
 
-    boolean stopContainerByNameOrId(String nameOrId);
+    boolean stopContainerByNameOrId(String nameOrId) throws Exception;
 
-    boolean startContainerByNameOrId(String nameOrId);
+    boolean startContainerByNameOrId(String nameOrId) throws Exception;
 
-    boolean restartContainerByNameOrId(String nameOrId);
+    boolean restartContainerByNameOrId(String nameOrId) throws Exception;
 
 
 }

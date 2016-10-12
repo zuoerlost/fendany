@@ -1,5 +1,7 @@
 package com.fendany.utils.unix;
 
+import com.fendany.doc.DocCommandTask;
+
 import java.io.IOException;
 import java.net.SocketException;
 import java.util.concurrent.*;
@@ -9,7 +11,9 @@ import java.util.concurrent.*;
  * <p>
  * UnixSocker
  * 1.线程池属性
- * 2.
+ * 2.单例模式
+ * 3.重复使用流对象
+ *
  */
 public enum UnixSocker {
 
@@ -28,7 +32,7 @@ public enum UnixSocker {
             executorService = Executors.newFixedThreadPool(loop);
             tasks = new LinkedBlockingDeque<>(loop);
             for (int i = 0; i < loop; i++) {
-                tasks.put(new UnixSockTask(new UnixSocket(path)));
+                tasks.put(new DocCommandTask(new UnixSocket(path)));
             }
         } catch (InterruptedException | SocketException e) {
             e.printStackTrace();
@@ -42,7 +46,7 @@ public enum UnixSocker {
             Future<String> response = executorService.submit(unixSockTask);
             String result = response.get();
             tasks.put(unixSockTask);
-            executorService.shutdown();
+//            executorService.shutdown();
             return result;
         } catch (IOException | InterruptedException | ExecutionException e) {
             e.printStackTrace();

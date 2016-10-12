@@ -1,6 +1,9 @@
 package com.fendany.demo;
 
+import com.fendany.doc.DocCommandService;
+import com.fendany.doc.DocCommandServiceImpl;
 import com.fendany.utils.unix.UnixSocker;
+import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -16,12 +19,17 @@ public class TestUnixSocket2 {
 
     @Test
     public void test00() throws InterruptedException, ExecutionException, IOException {
-        String ps = "GET /v1.23/containers/json HTTP/1.1\r\n" +
+        String ps = "GET /containers/json HTTP/1.1\r\n" +
                 "Host: \r\n" +
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "\r\n";
 
-        String ps_a = "GET /v1.23/containers/json?all=1 HTTP/1.1\r\n" +
+        String ps_a = "GET /containers/json?all=1 HTTP/1.1\r\n" +
+                "Host: \r\n" +
+                "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
+                "\r\n";
+
+        String ps_l = "GET /containers/json?limit=1 HTTP/1.1\r\n" +
                 "Host: \r\n" +
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "\r\n";
@@ -72,7 +80,18 @@ public class TestUnixSocket2 {
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "\r\n";
 
-        System.out.println(UnixSocker.INSTANCE.invoke(stop));
+        System.out.println(UnixSocker.INSTANCE.invoke(ps_a));
+    }
+
+    @Test
+    public void test01() throws Exception {
+        DocCommandService docCommandService = new DocCommandServiceImpl();
+//        System.out.println(docCommandService.getRunningContainers());
+//        System.out.println(docCommandService.getAllContainers());
+//        System.out.println(docCommandService.getLastContainer());
+//        System.out.println(docCommandService.startContainerByNameOrId("shanghai"));
+        System.out.println(docCommandService.restartContainerByNameOrId("shanghai"));
+//        System.out.println(docCommandService.stopContainerByNameOrId("shanghai"));
     }
 
 }
