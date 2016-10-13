@@ -5,6 +5,7 @@ import com.fendany.doc.DocCommandServiceImpl;
 import com.fendany.utils.unix.UnixSocker;
 import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
 import org.junit.Test;
+import org.springframework.util.SocketUtils;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
@@ -19,6 +20,24 @@ public class TestUnixSocket2 {
 
     @Test
     public void test00() throws InterruptedException, ExecutionException, IOException {
+
+        String info = "GET /info HTTP/1.1\r\n" +
+                "Host: \r\n" +
+                "User-Agent: Docker-Client/ (linux)\r\n" +
+                "\r\n";
+
+        String inspect = "GET /containers/shanghai/json HTTP/1.1\r\n" +
+                "Host: \r\n" +
+                "User-Agent: Docker-Client/ (linux)\r\n" +
+                "\r\n";
+
+        String kill = "POST /containers/shanghai/kill?signal=KILL HTTP/1.1\r\n" +
+                "Host: \r\n" +
+                "User-Agent: Docker-Client/ (linux)\r\n" +
+                "Content-Length: 0\r\n" +
+                "Content-Type: text/plain\r\n" +
+                "\r\n";
+
         String ps = "GET /containers/json HTTP/1.1\r\n" +
                 "Host: \r\n" +
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
@@ -26,7 +45,7 @@ public class TestUnixSocket2 {
 
         String ps_a = "GET /containers/json?all=1 HTTP/1.1\r\n" +
                 "Host: \r\n" +
-                "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
+                "User-Agent: Docker-Client (linux)\r\n" +
                 "\r\n";
 
         String ps_l = "GET /containers/json?limit=1 HTTP/1.1\r\n" +
@@ -80,18 +99,21 @@ public class TestUnixSocket2 {
                 "User-Agent: Docker-Client/1.11.2 (linux)\r\n" +
                 "\r\n";
 
-        System.out.println(UnixSocker.INSTANCE.invoke(ps_a));
+        System.out.println(UnixSocker.INSTANCE.invoke(inspect));
     }
 
     @Test
     public void test01() throws Exception {
         DocCommandService docCommandService = new DocCommandServiceImpl();
+//        System.out.println(docCommandService.getDockerInfo());
 //        System.out.println(docCommandService.getRunningContainers());
 //        System.out.println(docCommandService.getAllContainers());
 //        System.out.println(docCommandService.getLastContainer());
+//        System.out.println(docCommandService.getContainerInfoByNameOrId("shanghai111"));
 //        System.out.println(docCommandService.startContainerByNameOrId("shanghai"));
-        System.out.println(docCommandService.restartContainerByNameOrId("shanghai"));
+//        System.out.println(docCommandService.restartContainerByNameOrId("shanghai"));
 //        System.out.println(docCommandService.stopContainerByNameOrId("shanghai"));
+        System.out.println(docCommandService.killContainerByNameOrId("shanghai"));
     }
 
 }

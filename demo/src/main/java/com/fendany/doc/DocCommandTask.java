@@ -8,20 +8,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+import static com.fendany.doc.DocCommandParams.PARSE.*;
+
+
 /**
  * Created by zuoer on 16-10-12.
  */
 public class DocCommandTask extends UnixSockTask {
-
-    /**
-     * 固定长度 报文
-     */
-    private static final String CONTENT_LENGTH = "Content-Length";
-
-    /**
-     * 布丁长度报文，或超级长度报文
-     */
-    private static final String TRANSFER_ENCODING = "Transfer-Encoding: chunked\r\n";
 
     public DocCommandTask(UnixSocket unixSocket) {
         super(unixSocket);
@@ -44,41 +37,51 @@ public class DocCommandTask extends UnixSockTask {
                     String message = new String(buffer, 0, readByte);
                     stringBuffer.append(message);
                     String result = stringBuffer.toString();
-                    if (result.indexOf("\r\n") > 0 && (result.contains("HTTP/1.1 200 OK\r\n") || result.contains("HTTP/1.1 4"))) {
-                        // 成功有相应信息模式
-                        if (result.contains(CONTENT_LENGTH)) {
-                            // 长度可预见模式
-                            int a = result.indexOf(CONTENT_LENGTH) + 16;
-                            if (result.contains("\r\n\r\n")) {
-                                // body位置
-                                int c = result.indexOf("\r\n\r\n") + 4;
-                                // 头部输出完成
-                                int b = result.substring(a).indexOf("\r\n");
-                                String length_ = result.substring(a, a + b);
-                                int length = Integer.parseInt(length_);
-                                int now = result.length();
-                                // \r\n 算两个字符 =..=
-                                // 判断当前是否已经读取全部长度
-                                if (c + length == now) {
+//                    if (result.indexOf("\r\n") > 0 && (result.contains("HTTP/1.1 200 OK\r\n")
+//                            || result.contains("HTTP/1.1 4")
+//                            || result.contains("HTTP/1.1 5"))) {
+                    int fl_index = result.indexOf("\r\n");
+                    if (fl_index > 0) {
+                        String[] fl_array = DocCommandHelper.parseArray(result);
+                        // 根据HTTP CODE 查看是否存在BODY
+                        if (DocCommandHelper.hasBody(fl_array[1])) {
+                            // 成功有相应信息模式
+                            if (result.contains(LENGTH)) {
+                                // 长度可预见模式
+                                int a = result.indexOf(LENGTH) + 16;
+                                if (result.contains("\r\n\r\n")) {
+                                    // body位置
+                                    int c = result.indexOf("\r\n\r\n") + 4;
+                                    // 头部输出完成
+                                    int b = result.substring(a).indexOf("\r\n");
+                                    String length_ = result.substring(a, a + b);
+                                    int length = Integer.parseInt(length_);
+                                    int now = result.length();
+                                    // \r\n 算两个字符 =..=
+                                    // 判断当前是否已经读取全部长度
+                                    if (c + length == now) {
+                                        break;
+                                    }
+                                }
+                            } else if (result.contains(TRANSFER_ENCODING)) {
+                                // 长度不可预见模式
+                                if (result.endsWith("\r\n0\r\n\r\n")) {
                                     break;
                                 }
                             }
-                        } else if (result.contains(TRANSFER_ENCODING)) {
-                            // 长度不可预见模式
-                            if (result.endsWith("\r\n0\r\n\r\n")) {
+                        } else {
+                            // 除成功有相应信息外其他信息
+                            if (result.endsWith("\r\n\r\n")) {
+                                break;
+                            } else if (result.endsWith("\n\n")) {
                                 break;
                             }
-                        }
-                    } else {
-                        // 除成功有相应信息外其他信息
-                        if (result.endsWith("\r\n\r\n")) {
-                            break;
                         }
                     }
                 }
             }
         } catch (Exception e) {
-           throw new Exception("【DocCommandTaskError】： " + e.getMessage());
+            throw new Exception("【DocCommandTaskError】： " + e.getMessage());
         } finally {
             executor.shutdownNow();
         }
