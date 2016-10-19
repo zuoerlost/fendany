@@ -3,9 +3,7 @@ package com.fendany.demo;
 import com.fendany.doc.DocCommandService;
 import com.fendany.doc.DocCommandServiceImpl;
 import com.fendany.utils.unix.UnixSocker;
-import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
 import org.junit.Test;
-import org.springframework.util.SocketUtils;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
