@@ -1,0 +1,49 @@
+apply from: 'libraries.gradle'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+group 'httpFire'
+version '1.0'
+
+bootRepackage {
+    mainClass = 'com.fendany.MainApplication'
+}
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+buildscript {
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+}
+
+dependencies {
+
+    compile(libraries.commons_lang3)
+    compile(libraries.commons_logging)
+    compile(libraries.commons_io)
+
+    compile(libraries.commons_pool)
+    compile(libraries.commons_codec)
+
+    compile("org.apache.httpcomponents:httpcore:4.4.1")
+    compile("org.apache.httpcomponents:httpclient:4.4.1")
+    compile("org.apache.httpcomponents:httpmime:4.3.1")
+
+    compile("junit:junit:4.8.2")
+    compile("com.alibaba:fastjson:1.2.17")
+
+    // Spring Boot
+    compile("org.springframework.boot:spring-boot-devtools:1.4.1.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+}
