@@ -11,7 +11,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
-@ServerEndpoint("/ws/{name}/{pass}")
+//@ServerEndpoint("/ws/{name}/{pass}")
 @Component
 public class SshWs {
 

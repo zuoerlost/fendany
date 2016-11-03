@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by zuoer on 16-9-27.
  */
-@RestController
+//@RestController
 public class WebController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WebController.class);
