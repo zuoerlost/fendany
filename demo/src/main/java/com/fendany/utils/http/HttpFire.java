@@ -1,26 +1,10 @@
 package com.fendany.utils.http;
 
-import org.apache.http.HttpHost;
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.config.Registry;
-import org.apache.http.config.RegistryBuilder;
-import org.apache.http.config.SocketConfig;
-import org.apache.http.conn.ClientConnectionManager;
-import org.apache.http.conn.socket.PlainConnectionSocketFactory;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HttpContext;
-import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,12 +12,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.SSLContext;
 import java.io.*;
-import java.security.KeyManagementException;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -54,29 +33,6 @@ public class HttpFire implements InitializingBean {
 
     @Value("${http.test.replay}")
     private long replay;
-
-    private PoolingHttpClientConnectionManager cm;
-
-    public void init() throws KeyManagementException, NoSuchAlgorithmException, KeyStoreException {
-        SSLContext sslContext = SSLContexts.custom().loadTrustMaterial(null, new TrustSelfSignedStrategy()).build();
-
-        HostnameVerifier hostnameVerifier = SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER;
-        SSLConnectionSocketFactory cf = new SSLConnectionSocketFactory(sslContext, hostnameVerifier);
-        Registry socketRegistry = RegistryBuilder.create()
-                .register("https", cf)
-                .register("http", PlainConnectionSocketFactory.getSocketFactory())
-                .build();
-        SocketConfig socketConfig = SocketConfig.custom()
-                .setSoKeepAlive(true)
-                .build();
-        cm = new PoolingHttpClientConnectionManager(socketRegistry);
-        cm.setMaxTotal(1);
-        cm.setDefaultSocketConfig(socketConfig);
-    }
-
-    public CloseableHttpClient get() {
-        return HttpClients.custom().setConnectionManager(cm).build();
-    }
 
     public void invoke() {
 
@@ -257,8 +213,6 @@ public class HttpFire implements InitializingBean {
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-
-        init();
 
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
