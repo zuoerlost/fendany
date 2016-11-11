@@ -38,17 +38,16 @@ public class Test3Des {
         httpFactory.init();
         CloseableHttpClient closeableHttpClient = httpFactory.get();
         HttpPost httpPost = new HttpPost(url);
-        httpPost.addHeader("Content-Type", "application/json");
-        httpPost.addHeader("pid", "7vl5qiJf0kt");
-        httpPost.addHeader("iid", "6eauuUYX7jA");
-        httpPost.addHeader("hid", "j5PR7kfSs4n");
+//        httpPost.addHeader("Content-Type", "application/json");
+//        httpPost.addHeader("pid", "7vl5qiJf0kt");
+//        httpPost.addHeader("iid", "6eauuUYX7jA");
+//        httpPost.addHeader("hid", "j5PR7kfSs4n");
         StringEntity input = null;
-//        byte[] key_byte = Base64.decodeBase64(key);
         byte[] key_byte = key.getBytes();
         try {
-            byte[] msg_byte = Des3Pro.encrypt(key_byte, msg.getBytes());
+            byte[] msg_byte = Des3Pro.encrypt(key_byte, getMsg().getBytes());
             String req = Base64.encodeBase64String(msg_byte);
-            System.out.println("【加密前】" + msg);
+            System.out.println("【加密前】" + getMsg());
             System.out.println("【加密后】" + req);
             input = new StringEntity(req);
         } catch (UnsupportedEncodingException e) {
@@ -57,10 +56,8 @@ public class Test3Des {
         httpPost.setEntity(input);
         HttpResponse response = closeableHttpClient.execute(httpPost);
         String result = EntityUtils.toString(response.getEntity());
-        Result resultBean = JSON.parseObject(result , Result.class);
-        System.out.println("【resultBean 】" + resultBean.toString());
-        System.out.println("【 解码前 】" + resultBean.getData());
-        byte[] res_byte = Base64.decodeBase64(resultBean.getData());
+        System.out.println("【 解码前 】" + result);
+        byte[] res_byte = Base64.decodeBase64(result);
         byte[] result_byte = Des3Pro.decrypt(key_byte, res_byte);
         String result_str = new String(result_byte);
         System.out.println("【 解码后 】" + result_str);
@@ -79,7 +76,7 @@ public class Test3Des {
         System.out.println("【 name  】" + JSON.parseObject(result_str).get("name"));
     }
 
-    private static class Result{
+    private static class Result {
 
         private String code;
 
@@ -119,6 +116,41 @@ public class Test3Des {
                     ", data='" + data + '\'' +
                     '}';
         }
+    }
+
+    private String getMsg(){
+        return "{\n" +
+                "            \"package\": {\n" +
+                "                \"head\": {\n" +
+                "                    \"busseID\": \"1800\",\n" +
+                "                    \"sendTradeNum\": \"20150701083030-10011001-0001\",\n" +
+                "                    \"senderCode\": \"001\",\n" +
+                "                    \"senderName\": \"平安保险公司\",\n" +
+                "                    \"receiverCode\": \"200000042\",\n" +
+                "                    \"receiverName\": \"郑州中心医院\",\n" +
+                "                    \"intermediaryCode\": \"003\",\n" +
+                "                    \"intermediaryName\": \"乐约健康\",\n" +
+                "                    \"hosorgNum\": \"001\",\n" +
+                "                    \"hosorgName\": \"操作员姓名\",\n" +
+                "                    \"systemType\": \"1\",\n" +
+                "                    \"busenissType\": \"2\",\n" +
+                "                    \"standardVersionCode\": \"version:1.0.0\",\n" +
+                "                    \"clientmacAddress \": \"30BB7E0A5E2D \",\n" +
+                "                    \" recordCount \": \"1\"\n" +
+                "                },\n" +
+                "                \"body\": [{\"credentialType\":\"1\",\"credentialNum\":\"341221198903048135\",\"name\":\"\\u5218\\u5e86\\u8f89\",\"beginDate\":\"20161110\",\"endDate\":\"20161210\"}\n" +
+                "                ],\n" +
+                "                \"additionInfo\": {\n" +
+                "                    \"errorCode\": \"0\",\n" +
+                "                    \"errorMsg\": \"\",\n" +
+                "                    \"receiverTradeNum\": \"20150701083030-10012231-0001\",\n" +
+                "                    \"correlationId\": \"\",\n" +
+                "                    \"asyncAsk\": \"0\",\n" +
+                "                    \"callback\": \"\",\n" +
+                "                    \"curDllAddr\": \"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }";
     }
 
 }
