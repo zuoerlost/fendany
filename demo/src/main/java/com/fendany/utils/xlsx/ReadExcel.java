@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by moilions on 2016/11/11.
@@ -100,7 +101,7 @@ public class ReadExcel {
 
     public void loadXlsxText(String filePath) {
 
-        File inputFile = new File("D://test.xlsx");
+        File inputFile = new File(filePath);
         try {
             POITextExtractor extractor = ExtractorFactory.createExtractor(inputFile);
             System.out.println(extractor.getText());
@@ -111,12 +112,54 @@ public class ReadExcel {
     }
 
     /**
-     * 读取office 2007 xlsx
-     *
+     * 读取 xlsx
      * @param filePath
      */
+    public JSONObject loadXlsx(String filePath) {
+        // 构造 XSSFWorkbook
+        try (XSSFWorkbook xwb = new XSSFWorkbook(filePath)) {
+            JSONObject sheets = new JSONObject();
+            int sheets_num = xwb.getNumberOfSheets();
+            System.out.println("【sheets num】" + sheets_num);
+            // 循环每一个sheet页
+            for (int num = 0; num < sheets_num; num++) {
+                String sheet_name = xwb.getSheetName(num);
+                System.out.println(sheet_name);
+                XSSFSheet sheet = xwb.getSheetAt(num);
 
-    public JSONArray loadXlsx(String filePath) {
+                // 取标头第一行
+                XSSFRow row_sheet = sheet.getRow(0);
+                String[] heads = new String[row_sheet.getLastCellNum()];
+                for (int j = row_sheet.getFirstCellNum(); j < row_sheet.getPhysicalNumberOfCells(); j++) {
+                    heads[j] = row_sheet.getCell(j).toString();
+                }
+                System.out.println("【heads】" + Arrays.toString(heads));
+                JSONArray rows_json = new JSONArray();
+                // 循环输出表格中的内容
+                for (int i = sheet.getFirstRowNum() + 1; i < sheet.getPhysicalNumberOfRows(); i++) {
+                    XSSFRow row = sheet.getRow(i);
+                    JSONObject row_json = new JSONObject();
+                    for (int j = row.getFirstCellNum(); j < row.getPhysicalNumberOfCells(); j++) {
+                        row_json.put(heads[j], row.getCell(j).toString());
+                    }
+                    rows_json.add(row_json);
+                }
+                sheets.put(sheet_name, rows_json);
+            }
+            System.out.println("【result】" + sheets.toString());
+            return sheets;
+        } catch (IOException e) {
+            System.out.println("读取文件出错");
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * 读取 xlsx
+     * @param filePath
+     */
+    public Map<String,Map<String,JSONObject>> loadXlsx2Map(String filePath) {
         // 构造 XSSFWorkbook
         try (XSSFWorkbook xwb = new XSSFWorkbook(filePath)) {
             JSONArray jsonArray = new JSONArray();
@@ -150,7 +193,7 @@ public class ReadExcel {
                 jsonArray.add(sheets);
             }
             System.out.println("【result】" + jsonArray.toString());
-            return jsonArray;
+            return null;
         } catch (IOException e) {
             System.out.println("读取文件出错");
             e.printStackTrace();

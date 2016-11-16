@@ -13,14 +13,15 @@ import java.io.OutputStream;
  */
 public class ImgCodeUtils {
 
-    private static final char[] codeSequence = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-            'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+    private static final char[] codeSequence = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+            'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 
-    private ImgCodeUtils() {}
+    private ImgCodeUtils() {
+    }
 
     public static String genRamdonString(int lenght) {
         StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < lenght; i++) {
+        for (int i = 0; i < lenght; i++) {
             sb.append(codeSequence[RandomUtils.nextInt(36)]);
         }
         return sb.toString();

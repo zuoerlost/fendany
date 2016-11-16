@@ -1,4 +1,4 @@
-apply from: 'libraries.gradle'
+apply from: '../libraries.gradle'
 
 apply plugin: 'java'
 apply plugin: 'idea'
