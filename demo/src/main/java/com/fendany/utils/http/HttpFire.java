@@ -20,7 +20,7 @@ import java.util.TimerTask;
 /**
  * Created by Lost on 2016/11/2.
  */
-@Component
+//@Component
 public class HttpFire implements InitializingBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HttpFire.class);

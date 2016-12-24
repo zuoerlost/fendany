@@ -87,9 +87,9 @@ public class Test3Des {
                 "                    \" recordCount \": \"1\"\n" +
                 "                },\n" +
                 "                \"body\": [" +
-                "                       {   \"inHospitalNum\":\"500755113\"," +
-                "                           \"pageNum\":\"1\"," +
-                "                           \"name\":\"万朝峰\"" +
+                "                       {   \"inHospitalNum\":\"500756956\"," +
+                "                           \"pageNum\":\"1\" " +
+                "                           ,\"name\":\"李时忠\"" +
 //                "                           ,\"treatBeginDate\":\"20160914\"," +
 //                "                           \"treatEndDate\":\"20160916\"" +
                 "                       }\n" +
