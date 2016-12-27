@@ -51,9 +51,6 @@ public class Testleyue {
             String req = Base64.encodeBase64String(msg_byte);
             System.out.println("【加密前】" + msg);
             System.out.println("【加密后】" + req);
-
-//            req = sur1;
-
             StringEntity input = new StringEntity(req);
             httpPost.setEntity(input);
             HttpResponse response = closeableHttpClient.execute(httpPost);
