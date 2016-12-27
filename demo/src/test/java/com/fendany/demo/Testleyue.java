@@ -22,18 +22,25 @@ import java.security.NoSuchAlgorithmException;
  * <p>
  * pid=7vl5qiJf0kt&iid=6eauuUYX7jA&hid=j5PR7kfSs4n
  */
-public class Test3Des {
+public class Testleyue {
 
-    private String url = "http://211.167.232.2:9898/ins/user/getUserFile";
+    private String c210 = "http://211.167.232.2:9898/ins/user/getUserFile";
+
+    private String c220 = "http://211.167.232.2:9898/ins/User/confirm";
 
     private String key = "@6eauuUYX7jA@LEYUE100@00";
 
     @Test
     public void testc210() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
-        call(getMsg());
+        call(getC210(),c210);
     }
 
-    private String call(String msg) throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
+    @Test
+    public void testc220() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
+        call(getC220("Z10053773"),c220);
+    }
+
+    private String call(String msg , String url) throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
         HttpFactory httpFactory = new HttpFactory();
         httpFactory.init();
         CloseableHttpClient closeableHttpClient = httpFactory.get();
@@ -66,7 +73,7 @@ public class Test3Des {
         return null;
     }
 
-    private String getMsg(){
+    private String getC210(){
         return "{\n" +
                 "            \"package\": {\n" +
                 "                \"head\": {\n" +
@@ -87,9 +94,9 @@ public class Test3Des {
                 "                    \" recordCount \": \"1\"\n" +
                 "                },\n" +
                 "                \"body\": [" +
-                "                       {   \"inHospitalNum\":\"500756956\"," +
+                "                       {   \"inHospitalNum\":\"500764862\"," +
                 "                           \"pageNum\":\"1\" " +
-                "                           ,\"name\":\"李时忠\"" +
+                "                           ,\"name\":\"程新新\"" +
 //                "                           ,\"treatBeginDate\":\"20160914\"," +
 //                "                           \"treatEndDate\":\"20160916\"" +
                 "                       }\n" +
@@ -107,4 +114,42 @@ public class Test3Des {
                 "        }";
     }
 
+    private String getC220(String medicalNum){
+        return "{\n" +
+                "            \"package\": {\n" +
+                "                \"head\": {\n" +
+                "                    \"busseID\": \"C220\",\n" +
+                "                    \"sendTradeNum\": \"20150701083030-10011001-0001\",\n" +
+                "                    \"senderCode\": \"100000001\",\n" +
+                "                    \"senderName\": \"平安保险公司\",\n" +
+                "                    \"receiverCode\": \"400001431\",\n" +
+                "                    \"receiverName\": \"郑州中心医院\",\n" +
+                "                    \"intermediaryCode\": \"003\",\n" +
+                "                    \"intermediaryName\": \"乐约健康\",\n" +
+                "                    \"hosorgNum\": \"001\",\n" +
+                "                    \"hosorgName\": \"操作员姓名\",\n" +
+                "                    \"systemType\": \"1\",\n" +
+                "                    \"busenissType\": \"2\",\n" +
+                "                    \"standardVersionCode\": \"version:1.0.0\",\n" +
+                "                    \"clientmacAddress \": \"30BB7E0A5E2D \",\n" +
+                "                    \" recordCount \": \"1\"\n" +
+                "                },\n" +
+                "                \"body\": [" +
+                "                       {   \"medicalNum\":\""+medicalNum+"\" \n," +
+                "                           \"affirmFlg\":\"1\" \n" +
+                "                           ,\"imageFlg\":\"0\" \n" +
+                "                       }\n" +
+                "                ],\n" +
+                "                \"additionInfo\": {\n" +
+                "                    \"errorCode\": \"0\",\n" +
+                "                    \"errorMsg\": \"\",\n" +
+                "                    \"receiverTradeNum\": \"20150701083030-10012231-0001\",\n" +
+                "                    \"correlationId\": \"\",\n" +
+                "                    \"asyncAsk\": \"0\",\n" +
+                "                    \"callback\": \"\",\n" +
+                "                    \"curDllAddr\": \"\"\n" +
+                "                }\n" +
+                "            }\n" +
+                "        }";
+    }
 }
