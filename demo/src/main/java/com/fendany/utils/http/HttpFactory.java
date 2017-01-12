@@ -17,9 +17,6 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 
-/**
- * Created by moilions on 2016/11/9.
- */
 public class HttpFactory {
 
     private PoolingHttpClientConnectionManager cm;

@@ -24,6 +24,9 @@ import java.security.NoSuchAlgorithmException;
  */
 public class Testleyue {
 
+    /**
+     * http://182.92.192.186:8080
+     */
     private String c210 = "http://211.167.232.2:9898/ins/user/getUserFile";
 
     private String c220 = "http://211.167.232.2:9898/ins/User/confirm";
@@ -37,7 +40,7 @@ public class Testleyue {
 
     @Test
     public void testc220() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
-        call(getC220("Z10053773"),c220);
+        call(getC220("Z10045494"),c220);
     }
 
     private String call(String msg , String url) throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException {
@@ -91,9 +94,9 @@ public class Testleyue {
                 "                    \" recordCount \": \"1\"\n" +
                 "                },\n" +
                 "                \"body\": [" +
-                "                       {   \"inHospitalNum\":\"500764862\"," +
+                "                       {   \"inHospitalNum\":\"500753964\"," +
                 "                           \"pageNum\":\"1\" " +
-                "                           ,\"name\":\"程新新\"" +
+                "                           ,\"name\":\"高文雅\"" +
 //                "                           ,\"treatBeginDate\":\"20160914\"," +
 //                "                           \"treatEndDate\":\"20160916\"" +
                 "                       }\n" +
