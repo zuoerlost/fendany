@@ -138,15 +138,15 @@ public class DESedeUtil {
         return byteFina1;
     }
 
-    public static void main(String[] args) {
-        DESedeUtil des = new DESedeUtil("12313235");
-        String str1 = "abc平安科技";
-        String str2 = des.jiami(str1);
-        DESedeUtil des1 = new DESedeUtil();
-        String deStr = des1.jiemi("yg2AB6LKFD/l5Z6VqrqcpA==");
-        System.out.println("密文:" + str2);
-        System.out.println("明文:" + deStr);
-    }
+//    public static void main(String[] args) {
+//        DESedeUtil des = new DESedeUtil("12313235");
+//        String str1 = "abc平安科技";
+//        String str2 = des.jiami(str1);
+//        DESedeUtil des1 = new DESedeUtil();
+//        String deStr = des1.jiemi("yg2AB6LKFD/l5Z6VqrqcpA==");
+//        System.out.println("密文:" + str2);
+//        System.out.println("明文:" + deStr);
+//    }
 
 
 }

@@ -49,7 +49,7 @@
     }
 
     function openWS() {
-        websocket = new WebSocket("ws://" + getRootPath() + "/ws/zuoer/112");
+        websocket = new WebSocket("ws://" + getRootPath() + "/ws/demo");
         if (websocket) {
             websocket.onopen = function (evt) {
                 setMessageInnerHTML("open");

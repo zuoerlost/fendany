@@ -41,7 +41,6 @@ dependencies {
     compile(libraries.commons_lang3)
     compile(libraries.commons_logging)
     compile(libraries.commons_io)
-
     compile(libraries.commons_pool)
     compile(libraries.commons_codec)
 
@@ -66,6 +65,11 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     // GSON 格式化JSON
     compile("com.google.code.gson:gson:2.8.0")
+    // Async Http Client
+    compile("org.asynchttpclient:async-http-client:2.0.9")
+    // websocket client
+    compile("com.neovisionaries:nv-websocket-client:1.9")
+
     // 服务器密码校验，及身份验证
 //    compile("org.springframework.boot:spring-boot-starter-security:1.4.1.RELEASE")
 

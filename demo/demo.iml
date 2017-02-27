@@ -276,6 +276,28 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/async-http-client/2.0.9/d494efe254d5851da115a3d496d3b7fac3e5d7e2/async-http-client-2.0.9.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/async-http-client/2.0.9/873fb2052d8140c2709233720a328be435904f00/async-http-client-2.0.9-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/com.neovisionaries/nv-websocket-client/1.9/4caee47bf69d34313155944503ef20a7a7f92714/nv-websocket-client-1.9.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/com.neovisionaries/nv-websocket-client/1.9/96172059378f60a1e9957df9147cbb32a14dbcc2/nv-websocket-client-1.9-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
           <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.apache.poi/poi/3.15/965bba8899988008bb2341e300347de62aad5391/poi-3.15.jar!/"/>
         </CLASSES>
         <JAVADOC/>
@@ -422,6 +444,83 @@
         <JAVADOC/>
         <SOURCES>
           <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.4.1.RELEASE/a4536a01a7887e117a6bba5ff050b3a6b05131e3/spring-boot-actuator-1.4.1.RELEASE-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.0.38.Final/b8ba90df1228fe4baefc62affbffbab6b52708b1/netty-codec-http-4.0.38.Final.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.0.38.Final/f0f2bf1dba88ee90fff147cfaf666f0d48f7e90/netty-codec-http-4.0.38.Final-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.0.38.Final/d27fcaac6e313ab4f6f8de0a136af6ecf0455dea/netty-transport-native-epoll-4.0.38.Final-linux-x86_64.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.0.38.Final/89c13ce2c8dafec201e6d98a4948a7e01ecebafb/netty-transport-native-epoll-4.0.38.Final-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/netty-resolver-dns/2.0.9/aaea6af77c7cfb7acceb4010e8e6ade7ac8d79d8/netty-resolver-dns-2.0.9.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/netty-resolver-dns/2.0.9/51fc4ba6ae06ec3e173922cdbd02707a0fc80d05/netty-resolver-dns-2.0.9-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0/14b8c877d98005ba3941c9257cfe09f6ed0e0d74/reactive-streams-1.0.0.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0/5be7bd3f38e43c8fc83699bbb5328c62adb95bbf/reactive-streams-1.0.0-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/com.typesafe.netty/netty-reactive-streams/1.0.6/a12fb1bed4cf2571855cb7bb6a7824ec1956285d/netty-reactive-streams-1.0.6.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/com.typesafe.netty/netty-reactive-streams/1.0.6/9f4916062b485b429d20354934ee2f577e24dcaf/netty-reactive-streams-1.0.6-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/a9cbcdfb7e9f86fbc74d3afae65f2248bfbf82a0/javassist-3.20.0-GA.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/d8fdc08a455bc0b28bc0bed1f0d032d935cee8e1/javassist-3.20.0-GA-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/f285ac123f201fb4b028bac556928d7cf527ef48/slf4j-api-1.7.21-sources.jar!/"/>
         </SOURCES>
       </library>
     </orderEntry>
@@ -613,6 +712,83 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.0.38.Final/d1ad815d40bee5c7b54b4418a4b244697333ae56/netty-codec-4.0.38.Final.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.0.38.Final/8b79c5f269307138fe01ae5dff81a91f900f03e8/netty-codec-4.0.38.Final-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.0.38.Final/f76554467ebfaa18fa11c84534c9d215521cd066/netty-handler-4.0.38.Final.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.0.38.Final/7dc262aabc06d03197e7aaa3c4ced952180e0142/netty-handler-4.0.38.Final-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.0.38.Final/e77ce1ff475ad09e2b484fa379af1c6acff42784/netty-common-4.0.38.Final.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.0.38.Final/d5569c9e8d15e93df71a496cb206f17e78e6dd28/netty-common-4.0.38.Final-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.0.38.Final/7948c72521b94fe94f2002462ab25b04cb96ac73/netty-buffer-4.0.38.Final.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.0.38.Final/4d8442c51c986f18d66301a12c4a5f76176d44d4/netty-buffer-4.0.38.Final-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.0.38.Final/a1cbaacc6e4ab0e7fbac2a5a6e87ede7249a82f8/netty-transport-4.0.38.Final.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.0.38.Final/685026b7ea44d0504ec3d9ba8643a18d2a63d3d1/netty-transport-4.0.38.Final-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/netty-resolver/2.0.9/f0f34e18fbf4d749e1fba608749e78b2c8c75720/netty-resolver-2.0.9.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/netty-resolver/2.0.9/26f212740bff8b406039ab0e73450c9b742e0072/netty-resolver-2.0.9-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/netty-codec-dns/2.0.9/458f96e72352b129f67b4ce726f6882f81dd7279/netty-codec-dns-2.0.9.jar!/"/>
+        </CLASSES>
+        <JAVADOC/>
+        <SOURCES>
+          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.asynchttpclient/netty-codec-dns/2.0.9/b2a2c05b962888a5da8c00453d1471efe6086d4d/netty-codec-dns-2.0.9-sources.jar!/"/>
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
           <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/stax/stax-api/1.0.1/49c100caf72d658aca8e58bd74a4ba90fa2b0d70/stax-api-1.0.1.jar!/"/>
         </CLASSES>
         <JAVADOC/>
@@ -671,17 +847,6 @@
         <JAVADOC/>
         <SOURCES>
           <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.7/15a62dbee75aadf62b7d35640533262d764b29d3/logback-core-1.1.7-sources.jar!/"/>
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/139535a69a4239db087de9bab0bee568bf8e0b70/slf4j-api-1.7.21.jar!/"/>
-        </CLASSES>
-        <JAVADOC/>
-        <SOURCES>
-          <root url="jar:///Users/moilions/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.21/f285ac123f201fb4b028bac556928d7cf527ef48/slf4j-api-1.7.21-sources.jar!/"/>
         </SOURCES>
       </library>
     </orderEntry>
