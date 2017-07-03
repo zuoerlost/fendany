@@ -59,7 +59,6 @@ public class TestJava {
         System.out.println(result);
     }
 
-
     private class emp {
 
         private String x;

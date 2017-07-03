@@ -8,6 +8,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -19,6 +20,7 @@ import java.util.concurrent.*;
  * 尝试远程链接方案
  *
  */
+@Component
 public class SSHConnectDemo {
 
     private static Log log = LogFactory.getLog(SSHConnectDemo.class);

@@ -3,14 +3,16 @@ package com.fendany.utils.ws;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
+import java.util.UUID;
 
 //@ServerEndpoint("/ws/{name}/{pass}")
-@ServerEndpoint("/ws/demo")
+@ServerEndpoint("/ws/{senderCode}")
 @Component
 public class WebSocketServerDemo {
 
@@ -22,10 +24,11 @@ public class WebSocketServerDemo {
      * @param session 可选的参数。session为与某个客户端的连接会话，需要通过它来给客户端发送数据
      */
     @OnOpen
-    public void onOpen(final Session session, @PathParam("name") String name, @PathParam("pass") String pass) throws IOException {
+    public void onOpen(final Session session, @PathParam("senderCode") String senderCode) throws IOException {
         String id = session.getId();
-        LOG.info("【ws】【DEMO】: NEW session at {},{},{}", id, name, pass);
-        sendMessage("HI from server : ", session);
+        LOG.info("【ws】【DEMO】: NEW session at {},{},{}", senderCode);
+        String uuid = UUID.randomUUID().toString().replace("-","");
+        sendMessage(uuid + "Hello world", session);
     }
 
     @OnClose
@@ -40,8 +43,11 @@ public class WebSocketServerDemo {
      */
     @OnMessage
     public void onMessage(String message, Session session) throws IOException, InterruptedException {
+        if(StringUtils.isEmpty(message)){
+            LOG.info(" 【onMessage】 ");
+            return;
+        }
         LOG.info("rev message : {}", message.toString());
-        Thread.sleep(5000);
         sendMessage(message.toString(), session);
     }
 
@@ -58,13 +64,6 @@ public class WebSocketServerDemo {
      */
     public void sendMessage(String message, Session session) throws IOException {
         session.getBasicRemote().sendText(message);
-    }
-
-    /**
-     *
-     */
-    public void sendAsyncMessage(String message, Session session) throws IOException {
-        session.getAsyncRemote().sendText(message);
     }
 
 }
