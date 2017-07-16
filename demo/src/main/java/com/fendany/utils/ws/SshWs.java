@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
 //@ServerEndpoint("/ws/{name}/{pass}")
-@Component
+//@Component
 public class SshWs {
 
     private static final Log LOG = LogFactory.getLog(SshWs.class);

@@ -23,7 +23,7 @@ public class TestWebSocketClient {
     @Test
     public void test00() {
         try {
-            WebSocket ws = new WebSocketFactory().createSocket("ws://120.52.138.140/fendany/ws/demo");
+            WebSocket ws = new WebSocketFactory().createSocket("ws://localhost:9999/fendany/ws/demo");
             ws.connect();
             ws.addListener(new WebSocketAdapter() {
 

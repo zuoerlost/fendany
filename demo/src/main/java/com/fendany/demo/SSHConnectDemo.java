@@ -20,7 +20,7 @@ import java.util.concurrent.*;
  * 尝试远程链接方案
  *
  */
-@Component
+//@Component
 public class SSHConnectDemo {
 
     private static Log log = LogFactory.getLog(SSHConnectDemo.class);
